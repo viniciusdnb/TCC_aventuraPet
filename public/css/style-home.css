@@ -1,0 +1,119 @@
+@media only screen and (max-width: 750px) {
+    /*
+        cria o layout do menu no topo ta tela
+        com a posição fixa e a rolagem do conteudo fica 
+        por baixo
+    */
+
+    .container-header-home {
+        position: fixed;
+        top: 0;
+        z-index: 1;
+
+
+    }
+
+    .container-menu-home {
+        background-color: #fff;
+        width: 100vw;
+        border-bottom: 1px solid rgb(188, 188, 188);
+        border-radius: 0 0 5px 5px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30% 70%;
+        height: 150px;
+    }
+
+    .container-nav-home {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 10px;
+        border: 1px solid rgb(188, 188, 188);
+    }
+
+    .container-nav-home #menu {
+        text-align: end;
+        margin-right: 10px;
+    }
+
+    .container-menu-home #logo {
+        text-align: center;
+    }
+
+    .logo-img {
+        margin-top: 28px;
+        width: 50px;
+    }
+
+
+    .container-main-home {
+        margin-top: 152px;
+
+    }
+
+    .container-main-home li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .container-main-home img {
+        width: 80%;
+    }
+
+    #carrosel {
+        overflow: hidden;
+    }
+
+    #carrosel ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        left: 0;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        width: calc(var(--total-img) * 100%);
+        transition: left 0.5s ease;
+        animation: carrosel 20s ease infinite;
+    }
+
+    .container-footer-home {
+        border-top: 1px solid rgb(188, 188, 188);
+        height: 120px;
+        display: grid;
+        grid-template-rows: 50% 50%;
+    }
+
+    .container-footer-home h5{
+        text-align: center;
+        padding: 20px;        
+    }
+    .container-footer-home ul{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        align-items: center;
+        padding-bottom: 10px;
+      
+    }
+
+    .container-footer-home li{
+        text-align: center;
+    }
+
+    .container-footer-home a{
+        cursor: pointer;
+    }
+
+    .container-footer-home img{
+        width: 24px;
+        height: auto;
+        transition: width .5s ease;
+    }
+   
+    .container-footer-home img:hover{
+        width: 50px;
+        
+    }
+
+}

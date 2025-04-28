@@ -1,4 +1,22 @@
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 450px){
+    .card{
+        width: 45%;
+    }
+    .card-body p{
+        font-size: 3vw;
+    }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 550px){
+    .card{
+         width: 30% !important;
+    }
+    .card-body{
+        font-size: 2.5vw;
+    }
+}
+
+@media only screen and (max-width: 550px) {
     /*
         cria o layout do menu no topo ta tela
         com a posição fixa e a rolagem do conteudo fica 
@@ -116,4 +134,68 @@
         
     }
 
+    .container-artigo-home{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;           
+        gap: 10px;
+    }
+    .card{
+        width: 45%;
+        height: 50vh;
+        border: 1px solid rgb(188, 188, 188);        
+        border-radius: 5px;
+        margin-bottom: 10px; 
+    }
+
+    .card img{
+        width: 90%;
+        border-radius: 3px;
+        padding: 10px;
+    }
+
+    .card-body{
+        border-top: 1px solid rgb(188, 188, 188);
+        width: 100%;
+        display: grid;
+        grid-template-rows: 20% 80%;
+               
+    }
+
+    .card-body h5{
+        padding: 10px;
+        text-align: start;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .card-body p{
+        text-align: justify;
+        text-indent: 20px;
+        padding: 5px 5px 0px 5px;
+        border-top: 1px solid rgb(188, 188, 188);
+       
+    }
+    
+    /*.card {
+        
+        border: solid 1px rgb(188, 188, 188);
+        padding: 5px;
+        border-radius: 5px;
+    }*/
+
+   /* .container-artigo-home li img{
+        width: 100px;
+        padding-bottom: 5px;
+    }
+
+    .container-artigo-home li p{
+        text-align: justify;
+        padding: 10px;
+        border-top: 1px solid rgb(188, 188, 188);
+       background-color:  rgb(235, 234, 234);
+       border-radius: 5px;
+        text-indent: 10px;
+    }*/
 }

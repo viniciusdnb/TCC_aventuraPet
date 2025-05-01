@@ -1,0 +1,57 @@
+@media only screen and (min-width: 551px){
+
+    .container-header-home{
+        border: solid 1px rgb(188, 188, 188);
+        background-color: rgb(255, 197, 63);
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .container-nav-home{
+        display: grid;
+        grid-template-rows: 0 0 1fr 1fr;
+        padding: 10px;
+    }
+    
+    #logo a{
+        display: grid;        
+        grid-template-rows: 80% 20%;
+        grid-template-columns: 100%;     
+       
+    }
+    #logo h1{
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    #home{
+        overflow: hidden;
+    }
+    #menu{
+        overflow: hidden;
+    }
+
+    .container-nav-menu ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;       
+        cursor: pointer;
+       background-color: rgb(225, 160, 44);
+    }
+
+    .container-nav-menu ul li{
+        border-radius: 5px;
+        padding-top: 20px;
+        text-align: center;
+        height: 40px;
+        font-weight: bold;
+        transition: 1s ease;
+     
+    }
+    .container-nav-menu ul li:hover{
+        background-color:rgb(255, 197, 63);
+    }
+    #btn-close{
+        opacity: 0;
+    }
+
+} 

@@ -1,0 +1,28 @@
+* {
+    font-family: "Nunito";
+    font-optical-sizing: auto;
+    font-style: normal;    
+   
+}
+
+body{
+    min-width: 320px;
+    max-width: 1500px;
+    box-sizing: 0;  
+    margin: auto;     
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-family: "Nunito";
+}
+.bgTrans{
+    width: 100vw;
+    height: 500vh;
+    background-color: rgb(139, 139, 139);
+    z-index: 0;
+    position: absolute;
+    opacity: 50%;
+}

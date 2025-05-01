@@ -1,6 +1,7 @@
 const express = require('express');
 const App = express();
 const port = 8080;
+const hostName = 'localhost'
 const router = require('./Router/Router');
 /*--- App CONFIGS ---*/
 
@@ -18,10 +19,10 @@ App.set("view engine", "ejs");
 App.use("/aventurapet", router);
 
 App.get("/", function(req, res){
-   res.redirect(`http://localhost:${port}/aventurapet/`)
+   res.redirect(`http://${hostName}:${port}/aventurapet/`)
 })
 
 App.listen(port, function(){
-    console.log(`App online in http://localhost:${port}/aventurapet/`);
+    console.log(`App online in http://${hostName}:${port}/aventurapet/`);
   
 });

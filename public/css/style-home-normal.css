@@ -53,19 +53,18 @@
     #btn-close{
         opacity: 0;
     }
-    #carrosel{
-        overflow: hidden;
-        border: 1px solid rgb(188, 188, 188);
-        border-radius: 5px;
-        height: 50vh;
-    }
-    #carrosel ul li{        
-        position:absolute;
-        align-items: center;
-    }
-    #carrosel ul li img{
+    
+
+  
+    #carrosel img{
        height: 50vh;
-       opacity: 50%;
+       
+     
+       
+    }
+
+    .artigos{
+        margin-top: 10px;
     }
 
     .container-artigo-home ul{

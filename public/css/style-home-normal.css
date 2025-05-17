@@ -53,5 +53,42 @@
     #btn-close{
         opacity: 0;
     }
+    #carrosel{
+        overflow: hidden;
+        border: 1px solid rgb(188, 188, 188);
+        border-radius: 5px;
+        height: 50vh;
+    }
+    #carrosel ul li{        
+        position:absolute;
+        align-items: center;
+    }
+    #carrosel ul li img{
+       height: 50vh;
+       opacity: 50%;
+    }
 
-} 
+    .container-artigo-home ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .card{
+        width: 30vw;
+    }
+    .card img{
+        width: 500px;
+    }
+}
+
+@media only screen and (min-width: 1000px)
+{
+    .card{
+        width: 310px;
+        height: 450px;
+    }
+}

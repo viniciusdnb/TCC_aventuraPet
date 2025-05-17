@@ -4,6 +4,6 @@ module.exports = {
         if(text.length > 200){
           var partText = text.slice(0,200);
         }
-        res.render('Views/home/index', {'text':partText});
+        res.render('views/home/index', {'text':partText});
     }
 };

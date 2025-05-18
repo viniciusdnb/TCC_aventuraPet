@@ -1,3 +1,12 @@
 :root{
     --total-img: 5;
+    --bd-btn-secundary: #565c64;
+    --bg-btn-secundary:#9b9b9b;
+    --bg-btn-hover-secundary: #666;
+
+    --bd-btn-success: #19754a;
+    --bg-btn-success: #198754;
+    --bg-btn-hover-success:#14693b;
+
+
 }

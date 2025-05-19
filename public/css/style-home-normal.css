@@ -67,6 +67,8 @@
         margin-top: 10px;
     }
 
+
+
     .container-artigo-home ul{
         display: flex;
         align-items: center;
@@ -75,19 +77,14 @@
         flex-direction: row;
         gap: 10px;
     }
-
-    .card{
-        width: 30vw;
-    }
-    .card img{
-        width: 500px;
-    }
-}
-
-@media only screen and (min-width: 1000px)
-{
     .card{
         width: 310px;
         height: 450px;
     }
+    .card-body h5{
+        margin-top: 0;
+    }
+  
 }
+
+

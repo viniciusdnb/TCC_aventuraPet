@@ -19,6 +19,12 @@ a{
     color: black;
     font-family: "Nunito";
 }
+
+p, i{
+     font-family: "Nunito";
+        font-optical-sizing: auto;
+        font-style: normal;
+}
 .bgTrans{
     width: 100vw;
     height: 500vh;
@@ -149,7 +155,7 @@ a{
 
 .btn-success{
     border: 1px solid var(--bd-btn-success);
-    background-color: var(--bg-btn-success);
+    background-color: var(--bg-btn-success) ;
     color: white;
 }
 
@@ -164,4 +170,39 @@ h1,h2,h3,h4,h5,h6{
         font-optical-sizing: auto;
         font-style: normal;
 }
+
+.msg{
+    position: absolute;
+    border-radius: 5px;
+    width: 450px;
+    height: 50px;
+    margin-top: 10%;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.msg:hover{
+    background-color: var(--bg-msg-hover-danger);
+}
+
+.msg-error{
+    border: 1px solid var(--bd-msg-danger);
+    background-color: var(--bg-msg-danger);
+    color: var(--font-color-msg-danger);
+    
+    padding-top: 10px;
+}
+
+.msg-error p{
+    font-size: 18px;
+}
+
+.msg-error i {
+    font-size: 22px;
+    cursor: pointer;
+}
+
 

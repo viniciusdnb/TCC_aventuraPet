@@ -1,0 +1,27 @@
+<div id="progress-container">
+    <div id="progress-bar">
+
+</div>
+<main id="container-new-account">
+    <a href="/aventurapet/new-account">
+        <figure>
+            <img src="/img/left-48.png" alt="voltar">
+        </figure>
+    </a>
+    <form id="container-new-account-form" method="post" action="/aventurapet/new-account/save-name">
+        <div>
+            <label id="title-form" for="name">Qual é o seu nome</label>
+
+        </div>
+        <div>
+            <input type="text" name="name" id="name">
+        </div>
+        <div>
+            <input type="submit" name="seguinte" value="Seguinte">
+        </div>
+    </form>
+</main>
+
+<script>
+   progressBar(20);
+</script>

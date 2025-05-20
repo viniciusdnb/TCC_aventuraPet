@@ -1,6 +1,10 @@
 <%- include('../layout/head'); -%>
     <%- include('head') -%>
     <%- include('header') -%>
-    <%- include('main') -%>
+    <% 
+        var path = {pathName}
+        
+     %>
+    <%- include(path.pathName) -%>
     <%- include('footer') -%>
 <%- include('../layout/footer'); -%>

@@ -38,9 +38,6 @@
      backdrop-filter: blur(10px);
      -webkit-backdrop-filter: blur(10px);
      background-color: rgb(255, 255, 255, 0.3);
-
-     opacity: 80%;
-
      border-radius: 5px;
 
  }

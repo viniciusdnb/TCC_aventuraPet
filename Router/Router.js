@@ -40,6 +40,31 @@ router.get('/new-account', function(req, res)
     NewAccountController.index(req, res);
 })
 
+router.post('/new-account/verfy-email', 
+
+    body('email').notEmpty().escape(),
+     function(req, res){
+        const resultErrors = validationResult(req);
+        if(resultErrors.isEmpty()){
+            return NewAccountController.verifyEmail(req.body.email, req, res);
+        }
+        res.render('views/login/index',{errors:resultErrors.array()});
+});
+
+router.get('/new-account/name', function(req, res){
+    NewAccountController.name(req, res);
+})
+
+router.post('/new-account/save-name', 
+
+    body('name').notEmpty().escape(),
+     function(req, res){
+        const resultErrors = validationResult(req);
+        if(resultErrors.isEmpty()){
+            return NewAccountController.saveName(req.body.name, res);
+        }
+        res.render('views/login/index',{errors:resultErrors.array()});
+});
 
 
 module.exports = router;

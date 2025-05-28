@@ -68,3 +68,21 @@ router.post('/new-account/save-name',
 
 
 module.exports = router;
+
+
+/*
+    modelo de verificar autenticacao
+router.get('/home', function(req, res){
+    //verifica se a solicitação esta autenticado
+    if(req.isAuthenticated())
+    {
+        
+        return homeController.index(req, res);
+    }
+    res.redirect('/login');
+
+});
+
+router.get('/login', function(req, res){
+    loginController.index(req,res);
+});*/

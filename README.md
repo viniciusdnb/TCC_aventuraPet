@@ -19,6 +19,8 @@ tecnologia utilizada
 #### BACK-END
 - Nodejs 
 - Express
+- passport
+- express-validator
 - GeoCoding Google
 
 #### BANCO DE DADOS

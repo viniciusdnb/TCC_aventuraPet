@@ -200,6 +200,12 @@ h1,h2,h3,h4,h5,h6{
     font-size: 18px;
 }
 
+.input-error{
+    border: 2px solid #fa2b40;
+    box-shadow: 0 5px 10px  #f96e7c;
+    transition: 1s ease;
+}
+
 .msg-error i {
     font-size: 22px;
     cursor: pointer;

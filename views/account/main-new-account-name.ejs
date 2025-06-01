@@ -11,10 +11,9 @@
     <form id="container-new-account-form" method="post" action="/aventurapet/new-account/save-name">
         <div>
             <label id="title-form" for="name">Qual é o seu nome</label>
-
         </div>
         <div>
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name" required maxlength="60" minlength="4">
         </div>
         <div>
             <input type="submit" name="seguinte" value="Seguinte">

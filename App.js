@@ -3,11 +3,11 @@ const App = express();
 const port = 8080;
 const hostName = 'localhost'
 const router = require('./Router/Router');
-
+const session = require('express-session');
 /*configs para reativar no futuro 
 quando estiver usando os modolus de sessao, autenticacao
 verificar a configuração de rotas
-const session = require('express-session');
+
 const passport = require('passport');
 const router = require('./routers/router');
 const authRouter = require('./routers/authRouter');*/
@@ -18,9 +18,9 @@ App.use(express.static("public"));
 App.use(express.json());
 App.use(express.urlencoded({extended:true}));
 
-/*configs para reativar no futuro 
-quando estiver usando os modolus de sessao, autenticacao
-app.use(session({
+//configs para reativar no futuro 
+//quando estiver usando os modolus de sessao, autenticacao
+App.use(session({
     secret:'segredo',
     resave:false,
     saveUninitialized:false,
@@ -30,6 +30,7 @@ app.use(session({
         maxAge: 600000
     }
 }));
+/*
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(router);

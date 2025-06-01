@@ -1,6 +1,26 @@
-<% var visible = typeof errors == 'undefined'? 'hidden':'visible';  %>
+<% 
+  var visible ='hidden';
+  var msg ='';
+  
+  if(typeof errors != 'undefined')
+  {
 
-<div id="msg" style="visibility:<%= visible %>" class="msg msg-error">
-    <p>Ops algo deu errado! tente novamente</p>
-    <i>X</i>
-  </div> 
+    
+    errors.forEach(function(err){
+      msg = err.msg
+    })
+    visible = 'visible';
+    
+  }
+
+%>
+
+<div onclick="fechar(this)" id="msg" style="visibility:<%= visible %>" class="msg msg-error">
+    <p><%= msg %></p>
+    
+</div> 
+<script>
+  function fechar(el){
+    el.remove();
+  }
+</script>

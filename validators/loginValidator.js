@@ -3,7 +3,10 @@ const {checkSchema} = require('express-validator');
 const loginValidator = checkSchema({    
     username: {
         errorMessage: "invalid username",
-        notEmpty: true,        
+        notEmpty: true,
+        max: 60,
+        min:4
+            
     },
     password: {
         notEmpty: true,

@@ -10,11 +10,15 @@
         </figure>
     </a>
     <form id="container-new-account-form" method="post" action="/aventurapet/new-account/verfy-email">
+      <%
+        console.log(email)
+        var email = typeof email != undefined ? email.email : "";
+      %>
         <div>
             <label id="title-form" for="email">Para começarmos digite seu email:</label>
         </div>
         <div>
-            <input type="email" name="email" id="email">
+            <input type="email" value="<%= email %>" name="email" id="email" required placeholder="exemplo@emal.com">
         </div>
         <div>
             <input type="submit" name="seguinte" value="Seguinte">

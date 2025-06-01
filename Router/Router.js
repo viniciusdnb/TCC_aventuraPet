@@ -4,7 +4,7 @@ const HomeController = require('../Controllers/HomeController');
 const LoginController = require('../Controllers/LoginController');
 const {body, validationResult} = require('express-validator');
 const NewAccountController = require('../Controllers/NewAcconutController');
-
+const newAccountValidator = require('../validators/newAccountValidator');
 router.get('/', function(req, res){    
     HomeController.index(req, res);
 });
@@ -41,8 +41,9 @@ router.get('/new-account', function(req, res)
 })
 
 router.post('/new-account/verfy-email', 
-
-    body('email').notEmpty().escape(),
+    
+    //body('email').notEmpty().escape(),
+    newAccountValidator.emailValidator,
      function(req, res){
         const resultErrors = validationResult(req);
         if(resultErrors.isEmpty()){
@@ -57,14 +58,28 @@ router.get('/new-account/name', function(req, res){
 
 router.post('/new-account/save-name', 
 
-    body('name').notEmpty().escape(),
+    newAccountValidator.nameValidator,
      function(req, res){
         const resultErrors = validationResult(req);
         if(resultErrors.isEmpty()){
-            return NewAccountController.saveName(req.body.name, res);
+            return NewAccountController.saveName(req.body.name,req, res);
         }
         res.render('views/login/index',{errors:resultErrors.array()});
 });
+
+router.get('/new-account/options', function(req, res)
+{
+    NewAccountController.options(req, res)
+})
+
+router.post("/new-account/save-options",
+     //arruamer uma forma de validar os dados enviado do cliente
+    
+    function(req, res){
+        
+        return NewAccountController.saveOptionUser(req.body, req, res);
+    }
+);
 
 
 module.exports = router;

@@ -15,8 +15,8 @@
    #container-new-account-form {
       display: grid;
       grid-template-columns: 100%;
-      grid-template-rows: 2vh 15vh 2vh;
-      gap: 20vh;
+      grid-template-rows: 2vh 7vh 7vh 2vh;
+      gap: 18vh;
 
    }
 
@@ -25,7 +25,7 @@
    }
 
    #container-new-account-form input[type="email"],
-   input[type="text"] {
+   input[type="text"], input[type="password"] {
       border-top: 0;
       border-left: 0;
       border-right: 0;
@@ -35,6 +35,8 @@
       height: 7vh;
       font-size: 22px;
    }
+
+ 
 
    #container-new-account-form input[type="email"]:focus {
       outline: none;
@@ -70,48 +72,78 @@
    }
 
    #container-group-checkbox{
-     margin-top: -15vh;      
+      margin-top: -15vh;      
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content:space-around;
-      gap: 10px;
+      gap: 15px;
    }
 
    .container-checkbox {
-      width: 150px;
-      height: 150px; 
-      border: 1px solid black;
+      width: 140px;
+      height: 130px; 
+      background-color: rgb(241, 242, 244);
       border-radius: 5px; 
       cursor: pointer; 
       display: grid;
       grid-template-columns: 100%;
       grid-template-rows: 80% 20%;
-      background-image: url("/img/cat-caregivers-64.png");
       background-repeat: no-repeat;
       background-size: 90%;
       align-items: center;
       background-position: center;
-         
+      transition: 1s ease;
+   }
+
+   .container-checkbox:hover{
+      background-color: rgb(226, 226, 227) ;
+   }
+
+   .img-doar{
+       background-image: url("/img/cat-64.png");
+   }
+
+   .img-adotar{
+      background-image: url("/img/dog-64.png");
+   }
+
+   .img-comprar{
+       background-image: url("/img/basket-64.png");
+   }
+     .img-depois{
+       background-image: url("/img/timer-64.png");
    }
 
    .checkbox-label{
       position: relative;
       margin-top: 100%;
+      font-weight: bolder;
+      font-size: 1em;
 
    }
 
 
    #container-group-checkbox input[type="checkbox"]{
       position:absolute;
-      opacity: 10%;
-      width: 130px;
+      opacity: 0%;
+      width: 140px;
       height: 130px;
       z-index: 9;
-      
-      
+      cursor: pointer;
    }
   
 
+   
+   /*
+      funcao has altera o proprio elemento dependendo do estado do elemento filho
+   */
+   .container-checkbox:has(input[type="checkbox"]:checked){
+     
+      transition: 1s ease;
+      background-color: rgb(225, 225, 227);
+      border: 1px solid rgb(207, 207, 209);
+
+   }
 
 }

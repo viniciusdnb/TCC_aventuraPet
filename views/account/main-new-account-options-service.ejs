@@ -1,6 +1,5 @@
 <div id="progress-container">
     <div id="progress-bar">
-
 </div>
 <main id="container-new-account">
     <a href="/aventurapet/new-account/name">
@@ -9,26 +8,29 @@
         </figure>
     </a>
 
-    <form id="container-new-account-form" action="">
+    <form id="container-new-account-form" action="/aventurapet/new-account/save-options" method="post">
         <div>
             <label id="title-form">O que você deseja fazer?</label>
         </div>
         <div id="container-group-checkbox">
-            <div class="container-checkbox">               
-                <input type="checkbox" id="doar" name="doar" value="doar">
+            <div class="container-checkbox img-doar">
+                               
+                <input type="checkbox" id="doar" name="checkboxOption[]" value="1">
                 <label class="checkbox-label">Doar</label>
             </div>
-             <div class="container-checkbox">               
-                <input type="checkbox" id="doar" name="doar" value="doar">
-                <label class="checkbox-label">adotar</label>
+             <div class="container-checkbox img-adotar" > 
+                   
+                <input type="checkbox" id="adotar" name="checkboxOption[]" value="2">
+                <label class="checkbox-label">Adotar</label>
             </div>
-             <div class="container-checkbox">               
-                <input type="checkbox" id="doar" name="doar" value="doar">
-                <label class="checkbox-label">comprar</label>
+             <div class="container-checkbox img-comprar">
+
+                <input type="checkbox" id="comprar" name="checkboxOption[]" value="3">
+                <label class="checkbox-label">Comprar</label>
             </div>  
-             <div class="container-checkbox">               
-                <input type="checkbox" id="doar" name="doar" value="doar">
-                <label class="checkbox-label">depois decido</label>
+             <div class="container-checkbox img-depois" >               
+                <input type="checkbox" id="depois" name="checkboxOption[]" value="4">
+                <label class="checkbox-label">Outra hora</label>
             </div> 
             <!--<input type="checkbox" id="adotar" name="adotar" value="adotar">
             <input type="checkbox" id="comprar" name="comprar" value="comprar">

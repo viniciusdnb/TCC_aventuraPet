@@ -9,7 +9,7 @@ body{
     min-width: 320px;
     max-width: 1500px;
     box-sizing: 0;  
-    margin: auto;     
+   
     text-align: center;
     background-color: rgb(255, 255, 255);
 }
@@ -35,7 +35,7 @@ p, i{
 }
 #carrosel {
     overflow: hidden;
-    border: 1px solid rgb(188, 188, 188);
+    /*border: 1px solid rgb(188, 188, 188);*/
     border-radius: 5px;
 }
 
@@ -54,8 +54,8 @@ p, i{
     grid-auto-columns: 1fr;
     width: calc(var(--total-img) * 100%);
     transition: left 0.5s ease;
-    z-index: -1;
-    animation: carrosel 20s ease infinite;
+    /*z-index: -1;*/
+    animation: carrosel 30s ease infinite;
     
 }
 .card {        
@@ -72,7 +72,7 @@ p, i{
 }
 
 .card-body {
-    border-top: 1px solid rgb(188, 188, 188);
+   /* border-top: 1px solid rgb(188, 188, 188);*/
     width: 100%;
     display: grid;
     grid-template-rows: 20% 80%;
@@ -92,7 +92,7 @@ p, i{
     text-align: justify;
     text-indent: 20px;
     padding: 5px 5px 8px 5px;
-    border-top: 1px solid rgb(188, 188, 188);
+   /* border-top: 1px solid rgb(188, 188, 188);*/
     
 
 }
@@ -101,6 +101,7 @@ p, i{
     height: 120px;
     display: grid;
     grid-template-rows: 50% 50%;
+    border-radius: 5px;
 }
 
 .container-footer-home h5 {

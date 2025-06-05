@@ -82,6 +82,13 @@ router.post("/new-account/save-options",
 );
 
 
+router.post("/new-account/verfy-password", function (req, res){
+    //funcao para verificar e validar a senha passado pelo usuario
+  
+    PrincipalController.index(req, res);
+})
+
+
 module.exports = router;
 
 

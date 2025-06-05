@@ -1,10 +1,103 @@
-<main>
-    <section>
-        <h1>MEU PET</h1>
-        <img src="" alt="" srcset="">
-    </section>
-    <article>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, atque. Ut quibusdam reprehenderit, voluptatum iure sed perferendis adipisci suscipit iusto nesciunt natus quae facere, ab autem nam assumenda, saepe tempora.</p>
-        <a href="">CONHEÇA SEU NOVO PET</a>
-    </article>
-</main>
+<style>
+    @media only screen and (max-width: 450px) {
+        #container-main-principal {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 1fr 1fr;
+            width: 100%;
+            height: 100%;
+        }
+
+        #container-main-header {
+            background-color: rgb(241, 241, 241);
+            
+        }
+
+        #container-main-header img {
+            width: 98%;
+            height: 98%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        #container-main-header h1 {
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            font-weight: bolder;
+            font-size: 2em;
+        }
+
+        #container-main-footer {
+
+            background-color: rgb(241, 241, 241);
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 30% 70%;
+
+        }
+
+        #container-main-article {
+            padding: 10px;
+
+        }
+
+        #container-main-article p {
+            text-align: justify;
+            height: 50px;
+        }
+
+        #container-main-footer div {
+
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+            
+            height: 80px;
+            padding: 0 50px 0 50px;
+
+
+        }
+
+        #container-main-footer div a {
+            height: 50%;
+            margin-top: 20px;
+            border-radius: 30px;
+            padding-top: 10px;
+            background-color: rgb(225, 160, 44);
+            font-weight: bold;
+            transition: 1s ease;
+
+        }
+
+        #container-main-footer div a:hover {
+            cursor: pointer;
+            background-color: rgb(223, 148, 18);
+        }
+    }
+</style>
+<% if(!imgPet.imgPet){ var end="/img/sem-pet.png" ; var h1="Ops você ainda não cadastrou um pet!" }else{ var
+    end=imgPet.imgPet; } %>
+    <main id="container-main-principal">
+        <section id="container-main-header">
+            <h1>
+                <%= h1 %>
+            </h1>
+
+            <img src="<%= end %>" alt="" srcset="">
+        </section>
+        <section id="container-main-footer">
+            <article id="container-main-article">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, atque. Ut quibusdam reprehenderit,
+                    voluptatum iure se.</p>
+            </article>
+
+            <div>
+                <a href="">CADASTRE UM PET</a>
+                <a href="">CONHEÇA SEU NOVO PET</a>
+            </div>
+
+        </section>
+    </main>

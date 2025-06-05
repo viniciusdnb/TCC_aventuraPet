@@ -1,19 +1,72 @@
-<header>
-    <nav >
-        <style>
-            #menu-principal{
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                gap: 5vw;
-            }
-        </style>
+<style>
+    #container-nav-principal {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        border-radius: 5px;
+        padding: 0.5vh 0 0.5vh 0;
+        background-color: rgb(241, 241, 241);
+        border: 1px solid  rgb(195, 195, 195);
+        border-radius: 10px;
+       
+    }
+
+    #menu-principal {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    #menu-principal span{
+        color: red;
+        position: absolute;
+        font-size: 12px;
+        top: 20px;
+        font-weight: bolder;
+        
+    }
+
+    #menu-principal li:hover{
+        cursor: pointer;
+       
+    }
+
+    .select-menu {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        transition: 1s ease;
+        background-color: white;
+    }
+
+    .img-size {
+        width: 40px;
+        height: 40px;
+        padding-top: 12px;
+    }
+</style>
+
+<header id="container-nav-principal">
+    <nav id="nav-menu-principal">
         <ul id="menu-principal">
-            <li><img src="/img/home-50L.png"></li>
-            <li><img src="/img/gps-48.png" alt="" srcset=""></li>
-            <li><img src="/img/basket-48.png" alt="" srcset=""></li>
-            <li><img src="/img/chat-48.png" alt="" srcset=""></li>
-            <li><img src="/img/config-48.png" alt="" srcset=""></li>
+            <li class="select-menu">
+                <img class="img-size" src="/img/home-50L.png">
+            </li>
+            <li >
+                <span>Em breve</span>
+                <img class="img-size" src="/img/search-50.png" alt="" srcset=""></li>
+            <li >
+                <span>Em breve</span>
+                <img class="img-size" src="/img/gps-48.png" alt="" srcset=""></li>
+            <li><span>Em breve</span>
+                <img class="img-size" src="/img/basket-48.png" alt="" srcset=""></li>
+            <li><span>Em breve</span>
+                <img class="img-size" src="/img/chat-48.png" alt="" srcset=""></li>
+            <li><span>Em breve</span>
+                <img class="img-size" src="/img/config-48.png" alt="" srcset=""></li>
         </ul>
     </nav>
 </header>

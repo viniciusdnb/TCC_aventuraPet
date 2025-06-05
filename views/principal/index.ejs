@@ -1,0 +1,13 @@
+<%- include('../layout/head'); -%>
+    <%- include('head') -%>
+    <%- include('header') -%>
+    <% 
+
+        //pegar os atributos individualmente do do objeto de respota  
+        //passando como variavel para ser acessada dentro dos arquivo que contem o index  
+        var path = {pathName}
+        
+     %>
+    <%- include(path.pathName) -%>
+    <%- include('footer') -%>
+<%- include('../layout/footer'); -%>

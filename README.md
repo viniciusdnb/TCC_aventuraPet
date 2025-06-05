@@ -21,6 +21,8 @@ tecnologia utilizada
 - Express
 - passport
 - express-validator
+- express-session
+- Sequelize
 - GeoCoding Google
 
 #### BANCO DE DADOS

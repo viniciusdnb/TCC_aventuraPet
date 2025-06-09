@@ -1,67 +1,111 @@
 <style>
     @media only screen and (max-width: 450px) {
+
+
+
+
+        #container-main-header img {
+            width: 98%;
+            height: 98%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        #container-main-header h1 {
+           
+            font-size: 2em;
+        }
+
+        #container-main-footer {
+
+
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 20% 80%;
+
+        }
+
+
+        #container-main-article p {
+            padding: 10px !important;
+
+        }
+
+    }
+
+        #container-main-header h1{
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            font-weight: bolder;
+            font-size: 24px;
+        }
+        
+        #container-main-header img {
+           margin-top: 10px;
+            border-radius: 10px;
+           
+        }
+
+
         #container-main-principal {
             display: grid;
             grid-template-columns: 100%;
             grid-template-rows: 1fr 1fr;
             width: 100%;
             height: 100%;
+
         }
 
         #container-main-header {
             background-color: rgb(241, 241, 241);
-            
-        }
 
-        #container-main-header img {
-            width: 98%;
-            height: 98%;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-
-        #container-main-header h1 {
-            position: absolute;
-            width: 100%;
-            height: 50px;
-            border-radius: 5px;
-            font-weight: bolder;
-            font-size: 2em;
         }
 
         #container-main-footer {
 
             background-color: rgb(241, 241, 241);
+
+
+        }
+
+        #container-main-footer {
+
             display: grid;
             grid-template-columns: 100%;
-            grid-template-rows: 30% 70%;
-
+            grid-template-rows: 20% 80%;
+            width: 100%;
+            text-align: center;
+            align-items: flex-start
         }
 
-        #container-main-article {
-            padding: 10px;
-
-        }
 
         #container-main-article p {
             text-align: justify;
             height: 50px;
+            padding: 20px 50px 0 50px;
+            font-size: 18px;
         }
 
         #container-main-footer div {
 
-            display: grid;
-            grid-template-columns: 100%;
-            grid-template-rows: 1fr 1fr;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 10px;
-            
             height: 80px;
             padding: 0 50px 0 50px;
+
+
 
 
         }
 
         #container-main-footer div a {
+
+            width: 300px;
             height: 50%;
             margin-top: 20px;
             border-radius: 30px;
@@ -76,7 +120,7 @@
             cursor: pointer;
             background-color: rgb(223, 148, 18);
         }
-    }
+    
 </style>
 <% if(!imgPet.imgPet){ var end="/img/sem-pet.png" ; var h1="Ops você ainda não cadastrou um pet!" }else{ var
     end=imgPet.imgPet; } %>

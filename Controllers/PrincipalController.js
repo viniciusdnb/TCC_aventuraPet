@@ -10,5 +10,22 @@ module.exports = {
      addNewPet: function(req, res){
         const typePets = require('../model/typePets');
         res.render('views/principal/index', {pathName:"principal-main-add-new-pet", typePets});
-    }
+    },
+      preferenceTypePet: function(req, res)
+    {
+       
+        switch (parseInt(req.body.radioNewPet)) {
+            case 1:
+                 var optionsPets = require('../model/typeCats');
+                
+                break;
+        
+            case 2:
+                var optionsPets = require('../model/typeDogs');
+                break;
+        };
+        
+
+        res.render('views/principal/index', {pathName: "principal-main-option-new-pet", optionsPets});
+    } 
 }

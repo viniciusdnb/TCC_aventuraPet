@@ -86,7 +86,16 @@ router.post("/new-account/verfy-password", function (req, res){
     //funcao para verificar e validar a senha passado pelo usuario
   
     PrincipalController.index(req, res);
+});
+
+
+router.get("/principal", function(req, res){
+    PrincipalController.index(req, res);
 })
+router.get("/principal/add-new-pet", function(req, res){
+    PrincipalController.addNewPet(req, res);
+})
+
 
 
 module.exports = router;

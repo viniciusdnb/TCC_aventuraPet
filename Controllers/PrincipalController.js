@@ -6,5 +6,9 @@ module.exports = {
         const imgPet = false
         
         res.render('views/principal/index', {pathName:"principal-main", imgPet:imgPet});
+    },
+     addNewPet: function(req, res){
+        const typePets = require('../model/typePets');
+        res.render('views/principal/index', {pathName:"principal-main-add-new-pet", typePets});
     }
 }

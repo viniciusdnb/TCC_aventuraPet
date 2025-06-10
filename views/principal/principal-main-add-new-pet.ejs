@@ -10,6 +10,9 @@
 
     #container-principal-main-choice-type-pet header {
         padding: 10px;
+        display: flex; 
+        flex-direction: row;
+        justify-content: space-around;
     }
 
     #container-principal-main-choice-type-pet h1 {
@@ -41,7 +44,7 @@
 
     }
 
-    #form-type-pet input[type="checkbox"] {
+    #form-type-pet input[type="radio"] {
         position: relative;
         outline: 1px solid red;
         height: 100%;
@@ -51,12 +54,12 @@
         left: -3px;
         opacity: 0%;
         cursor: pointer;
-        
-        
+
+
     }
 
 
-    #form-type-pet>div:has(input[type="checkbox"]:checked) {
+    #form-type-pet>div:has(input[type="radio"]:checked) {
         background-color: rgb(225, 160, 44);
         font-weight: bold;
         transition: 0.5s ease;
@@ -64,7 +67,6 @@
 
     #form-type-pet input[type="submit"] {
         margin-top: 50px;
-
         border-radius: 30px;
         background-color: rgb(225, 160, 44);
         width: 80%;
@@ -80,23 +82,40 @@
     #form-type-pet input[type="submit"]:hover {
         background-color: rgb(223, 148, 18);
     }
+
+    .disabled {
+        color: rgb(172, 173, 173);
+        cursor: not-allowed !important;
+    }
 </style>
+
 <main id="container-principal-main-choice-type-pet">
     <header>
-        <h1>Qual é a sua preferencia?</h1>
+        <a href="/aventurapet/principal">
+            <figure>
+                <img src="/img/left-48.png" alt="voltar">
+            </figure>
+        </a>
+        <h1>Qual é o tipo de pet?</h1>
+
     </header>
     <section>
         <% var arrTypePets=typePets.getTypePets; %>
-            <form id="form-type-pet" action="">
-                <% arrTypePets.forEach(function(pet){ %>
-                    <div>
+            <form id="form-type-pet" action="/aventurapet/principal/preference-typePet" method="post">
+                <% arrTypePets.forEach(function(pet){ var disabled="" ; var disabledClass=""; if(pet.key> 2){
+                    disabled = "disabled";
+                    disabledClass = 'class=disabled';
+                    }
+                    %>
+                    <div <%=disabledClass %>>
                         <label>
                             <%=pet.value%>
                         </label>
-                        <input type="checkbox" value="<%= pet.key %>">
+                        <input type="radio" <%=disabled %>
+                        <%= disabledClass %>
+                            name="radioNewPet" value="<%= pet.key %>">
                     </div>
                     <%})%>
-
                         <input type="submit" value="Seguinte">
             </form>
     </section>

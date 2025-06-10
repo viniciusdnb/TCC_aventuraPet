@@ -1,0 +1,69 @@
+<style>
+    #container-principal-main-choice-type-pet header {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #container-principal-main-choice-type-pet h1 {
+        font-size: 1.8rem;
+
+    }
+    #container-principal-main-choice{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        
+    }
+
+    #container-principal-main-choice img{
+        width: 400px;
+        border-radius: 10px;
+    }
+    .container-figure{
+        border: 1px solid rgb(205, 205, 205);
+        border-radius: 10px;
+        
+    }
+     .container-figure p{
+            font-size: 24px;
+            font-weight: bold;
+         }
+
+    @media only screen and (max-width:450px) {
+        .container-figure img{
+            width: 300px !important;
+        }
+        .container-figure p{
+            font-size: 2rem;
+         }
+
+    }
+</style>
+
+<main id="container-principal-main-choice-type-pet">
+    <header>
+        <a href="/aventurapet/principal/add-new-pet">
+            <figure>
+                <img src="/img/left-48.png" alt="voltar">
+            </figure>
+        </a>
+        <h1>Qual Raça preferida?</h1>
+    </header>
+    <section id="container-principal-main-choice">
+
+        <% var arrPets=optionsPets.getRacaPets; arrPets.forEach(function(pet){ %>
+            <figure class="container-figure">
+                <img  src="<%= pet.endImg %>" alt="<%= pet.name %>">
+                
+                    <p><%= pet.name %></p>
+               
+            </figure>
+
+            <%})%>
+
+    </section>
+</main>

@@ -97,6 +97,13 @@ router.get("/principal/add-new-pet", function(req, res){
 })
 
 
+router.post("/principal/preference-typePet", function(req, res){
+    //construir formas de validacao
+    //construir formas de salvar na sessao
+    PrincipalController.preferenceTypePet(req, res);
+})
+
+
 
 module.exports = router;
 

@@ -1,0 +1,104 @@
+<style>
+    #container-principal-main-choice-type-pet {
+        height: 100vh;
+        padding: 10px;
+        display: grid;
+        grid-template-rows: 10% 90%;
+        grid-template-columns: 100%;
+
+    }
+
+    #container-principal-main-choice-type-pet header {
+        padding: 10px;
+    }
+
+    #container-principal-main-choice-type-pet h1 {
+        font-size: 1.8rem;
+
+    }
+
+    #form-type-pet {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 10px 10px 10px 25px;
+        gap: 20px;
+        margin-top: 50px;
+    }
+
+    #form-type-pet label {
+        font-size: 1.5rem;
+        padding: 10px;
+
+    }
+
+    #form-type-pet div {
+        border: 1px solid rgb(192, 192, 192);
+        border-radius: 25px;
+        height: 30px;
+        margin-top: 20px;
+        padding-top: 5px;
+
+    }
+
+    #form-type-pet input[type="checkbox"] {
+        position: relative;
+        outline: 1px solid red;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        top: -30px;
+        left: -3px;
+        opacity: 0%;
+        cursor: pointer;
+        
+        
+    }
+
+
+    #form-type-pet>div:has(input[type="checkbox"]:checked) {
+        background-color: rgb(225, 160, 44);
+        font-weight: bold;
+        transition: 0.5s ease;
+    }
+
+    #form-type-pet input[type="submit"] {
+        margin-top: 50px;
+
+        border-radius: 30px;
+        background-color: rgb(225, 160, 44);
+        width: 80%;
+        height: 7vh;
+        border: 0;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 1s ease;
+
+    }
+
+    #form-type-pet input[type="submit"]:hover {
+        background-color: rgb(223, 148, 18);
+    }
+</style>
+<main id="container-principal-main-choice-type-pet">
+    <header>
+        <h1>Qual é a sua preferencia?</h1>
+    </header>
+    <section>
+        <% var arrTypePets=typePets.getTypePets; %>
+            <form id="form-type-pet" action="">
+                <% arrTypePets.forEach(function(pet){ %>
+                    <div>
+                        <label>
+                            <%=pet.value%>
+                        </label>
+                        <input type="checkbox" value="<%= pet.key %>">
+                    </div>
+                    <%})%>
+
+                        <input type="submit" value="Seguinte">
+            </form>
+    </section>
+
+</main>

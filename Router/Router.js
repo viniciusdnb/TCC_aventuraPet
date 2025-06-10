@@ -5,6 +5,7 @@ const LoginController = require('../Controllers/LoginController');
 const {body, validationResult} = require('express-validator');
 const NewAccountController = require('../Controllers/NewAcconutController');
 const newAccountValidator = require('../validators/newAccountValidator');
+const PrincipalController = require('../Controllers/PrincipalController');
 router.get('/', function(req, res){    
     HomeController.index(req, res);
 });
